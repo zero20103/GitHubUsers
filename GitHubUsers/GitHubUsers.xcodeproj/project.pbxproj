@@ -99,11 +99,13 @@
 		14BB48C42400B51800051FD4 /* GitHubUsers */ = {
 			isa = PBXGroup;
 			children = (
+				14BB48F82400B58900051FD4 /* Views */,
+				14BB48F72400B58200051FD4 /* Controllers */,
+				14BB48F62400B57C00051FD4 /* ViewModels */,
+				14BB48F52400B57200051FD4 /* Models */,
 				14BB48C52400B51800051FD4 /* AppDelegate.swift */,
 				14BB48C72400B51800051FD4 /* SceneDelegate.swift */,
-				14BB48C92400B51800051FD4 /* ContentView.swift */,
 				14BB48CB2400B51A00051FD4 /* Assets.xcassets */,
-				14BB48D02400B51A00051FD4 /* LaunchScreen.storyboard */,
 				14BB48D32400B51A00051FD4 /* Info.plist */,
 				14BB48CD2400B51A00051FD4 /* Preview Content */,
 			);
@@ -134,6 +136,36 @@
 				14BB48E92400B51A00051FD4 /* Info.plist */,
 			);
 			path = GitHubUsersUITests;
+			sourceTree = "<group>";
+		};
+		14BB48F52400B57200051FD4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		14BB48F62400B57C00051FD4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		14BB48F72400B58200051FD4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				14BB48C92400B51800051FD4 /* ContentView.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		14BB48F82400B58900051FD4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				14BB48D02400B51A00051FD4 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
