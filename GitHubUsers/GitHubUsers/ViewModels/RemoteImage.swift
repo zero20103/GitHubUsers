@@ -11,11 +11,11 @@ import SwiftUI
 import Combine
 
 class RemoteImage: ObservableObject {
-    let didChange = PassthroughSubject<Data, Never>()
+    let didChange = ObservableObjectPublisher()
     
-    var data = Data(){
+    @Published var image = Image(uiImage: UIImage(imageLiteralResourceName:"EmptyUser")) {
         didSet {
-            didChange.send(data)
+            didChange.send()
         }
     }
     
@@ -25,7 +25,7 @@ class RemoteImage: ObservableObject {
         URLSession.shared.dataTask(with: url) {(data, response, error) in
             guard let data = data else { return }
             DispatchQueue.main.async {
-                self.data = data
+                self.image = Image(uiImage: UIImage(data: data)!)
             }
         }.resume()
     }

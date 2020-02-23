@@ -22,7 +22,8 @@ struct UserCellView: View {
         HStack {
             Text("\(userCell.NumberOfItems)")
                 .frame(width: 25.0)
-            Image(uiImage: remoteImage.data.isEmpty ?UIImage(imageLiteralResourceName:"EmptyUser"):UIImage(data: remoteImage.data)!).resizable()
+            remoteImage.image
+                .resizable()
                 .frame(width: 50.0, height: 50.0)
                 .clipShape(Circle())
             /*.overlay(

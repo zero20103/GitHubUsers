@@ -21,20 +21,5 @@ class UserCellViewModel {
         login = user.login
         site_admin = user.site_admin
         NumberOfItems = user.id
-        
-        let url = URL(string: user.avatar_url)!
-        URLSession.shared.dataTask(with: url) {(data, response, error) in
-            guard let data = data else { return }
-            DispatchQueue.main.async {
-                self.avatar_data = data
-            }
-        }.resume()
-    }
-    
-    static func GetTest() -> UserCellViewModel{
-        let user = User(login: "TestLogin", id: 0, node_id: "TestNodeID", avatar_url: "EmptyUser", gravatar_id: "TestGravatarID", url: "TestUrl", html_url: "TestHtmlUrl", followers_url: "TestFollowersUrl", following_url: "TestFollowingUrl", gists_url: "TestGistsUrl", starred_url: "TestStarredUrl", subscriptions_url: "TestSubscriptions", organizations_url: "TestOrganizationsUrl", repos_url: "TestReposUrl", events_url: "TestEventsUrl", received_events_url: "TestReceivedEventsUrl", type: "TestType", site_admin: true)
-        
-        
-        return UserCellViewModel(user: user);
     }
 }
