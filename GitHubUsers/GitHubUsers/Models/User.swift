@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct User : Identifiable,Codable {
+struct User : Hashable, Codable, Identifiable {
     let login : String
     let id : Int
     let node_id : String
