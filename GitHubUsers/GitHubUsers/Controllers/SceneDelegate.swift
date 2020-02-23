@@ -29,6 +29,26 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window = window
             window.makeKeyAndVisible()
         }
+        
+        let url = URL(string: "https://api.github.com/users")!
+        URLSession.shared.dataTask(with: url) {(data, response, error) in
+            guard let data = data else { return }
+            DispatchQueue.main.async {
+                do {
+                    let users = try JSONDecoder().decode([User].self, from: data)
+                    let userListView = UserListView(users: Array(users.prefix(100)))
+                    if let windowScene = scene as? UIWindowScene {
+                        let window = UIWindow(windowScene: windowScene)
+                        window.rootViewController = UIHostingController(rootView: userListView)
+                        self.window = window
+                        window.makeKeyAndVisible()
+                    }
+                }
+                catch {
+                   print(error)
+                }
+            }
+        }.resume()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

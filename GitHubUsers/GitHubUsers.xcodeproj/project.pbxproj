@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1466187B2402198200AA677C /* UserCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1466187A2402198200AA677C /* UserCellView.swift */; };
+		146619072402CE0D00AA677C /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146619062402CE0D00AA677C /* UserListView.swift */; };
+		1466190B2402D87300AA677C /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1466190A2402D87300AA677C /* RemoteImage.swift */; };
 		14BB48C62400B51800051FD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB48C52400B51800051FD4 /* AppDelegate.swift */; };
 		14BB48C82400B51800051FD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB48C72400B51800051FD4 /* SceneDelegate.swift */; };
 		14BB48CA2400B51800051FD4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB48C92400B51800051FD4 /* ContentView.swift */; };
@@ -15,6 +18,8 @@
 		14BB48D22400B51A00051FD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14BB48D02400B51A00051FD4 /* LaunchScreen.storyboard */; };
 		14BB48DD2400B51A00051FD4 /* GitHubUsersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB48DC2400B51A00051FD4 /* GitHubUsersTests.swift */; };
 		14BB48E82400B51A00051FD4 /* GitHubUsersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB48E72400B51A00051FD4 /* GitHubUsersUITests.swift */; };
+		14BB48FA2400B68B00051FD4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB48F92400B68B00051FD4 /* User.swift */; };
+		14D3FEA52401220D00AAA364 /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D3FEA42401220D00AAA364 /* UserCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1466187A2402198200AA677C /* UserCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellView.swift; sourceTree = "<group>"; };
+		146619062402CE0D00AA677C /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
+		1466190A2402D87300AA677C /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		14BB48C22400B51800051FD4 /* GitHubUsers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubUsers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14BB48C52400B51800051FD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14BB48C72400B51800051FD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +57,8 @@
 		14BB48E32400B51A00051FD4 /* GitHubUsersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubUsersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14BB48E72400B51A00051FD4 /* GitHubUsersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUsersUITests.swift; sourceTree = "<group>"; };
 		14BB48E92400B51A00051FD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14BB48F92400B68B00051FD4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		14D3FEA42401220D00AAA364 /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,14 +109,12 @@
 		14BB48C42400B51800051FD4 /* GitHubUsers */ = {
 			isa = PBXGroup;
 			children = (
+				14BB48CB2400B51A00051FD4 /* Assets.xcassets */,
+				14BB48D32400B51A00051FD4 /* Info.plist */,
 				14BB48F82400B58900051FD4 /* Views */,
 				14BB48F72400B58200051FD4 /* Controllers */,
 				14BB48F62400B57C00051FD4 /* ViewModels */,
 				14BB48F52400B57200051FD4 /* Models */,
-				14BB48C52400B51800051FD4 /* AppDelegate.swift */,
-				14BB48C72400B51800051FD4 /* SceneDelegate.swift */,
-				14BB48CB2400B51A00051FD4 /* Assets.xcassets */,
-				14BB48D32400B51A00051FD4 /* Info.plist */,
 				14BB48CD2400B51A00051FD4 /* Preview Content */,
 			);
 			path = GitHubUsers;
@@ -141,6 +149,7 @@
 		14BB48F52400B57200051FD4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				14BB48F92400B68B00051FD4 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -148,6 +157,8 @@
 		14BB48F62400B57C00051FD4 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				14D3FEA42401220D00AAA364 /* UserCellViewModel.swift */,
+				1466190A2402D87300AA677C /* RemoteImage.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -155,7 +166,8 @@
 		14BB48F72400B58200051FD4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				14BB48C92400B51800051FD4 /* ContentView.swift */,
+				14BB48C52400B51800051FD4 /* AppDelegate.swift */,
+				14BB48C72400B51800051FD4 /* SceneDelegate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -164,6 +176,9 @@
 			isa = PBXGroup;
 			children = (
 				14BB48D02400B51A00051FD4 /* LaunchScreen.storyboard */,
+				14BB48C92400B51800051FD4 /* ContentView.swift */,
+				1466187A2402198200AA677C /* UserCellView.swift */,
+				146619062402CE0D00AA677C /* UserListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -299,9 +314,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14D3FEA52401220D00AAA364 /* UserCellViewModel.swift in Sources */,
+				14BB48FA2400B68B00051FD4 /* User.swift in Sources */,
 				14BB48C62400B51800051FD4 /* AppDelegate.swift in Sources */,
+				1466190B2402D87300AA677C /* RemoteImage.swift in Sources */,
+				146619072402CE0D00AA677C /* UserListView.swift in Sources */,
 				14BB48C82400B51800051FD4 /* SceneDelegate.swift in Sources */,
 				14BB48CA2400B51800051FD4 /* ContentView.swift in Sources */,
+				1466187B2402198200AA677C /* UserCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
