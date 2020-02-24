@@ -33,46 +33,47 @@ struct UserDetailsView: View {
                 .clipShape(Circle())
                 .overlay(Circle().stroke(Color.white, lineWidth: 3))
                 .shadow(radius: 3)
+                .navigationBarTitle(Text("User details"))
             Text(remoteUserDetails.name)
             Text(remoteUserDetails.bio)
             Divider()
-            .navigationBarTitle(Text("User details"))
-            HStack {
-                Image("EmptyUser")
-                .resizable()
-                .frame(width: 50.0, height: 50.0)
-                VStack {
-                    Text(remoteUserDetails.login)
-                    ZStack {
-                        Capsule()
-                        .foregroundColor(.blue)
-                      Text("STAFF")
-                        .foregroundColor(.white)
-                        .font(Font.system(size: 10))
+            VStack(alignment: .leading,spacing: 10) {
+                HStack {
+                    Image("EmptyUser")
+                    .resizable()
+                    .frame(width: 50.0, height: 50.0)
+                    VStack {
+                        Text(remoteUserDetails.login)
+                        ZStack {
+                            Capsule()
+                            .foregroundColor(.blue)
+                          Text("STAFF")
+                            .foregroundColor(.white)
+                            .font(Font.system(size: 10))
+                        }
+                        .frame(width: 50, height: 15)
+                        .opacity(user.site_admin ? 1.0 : 0.0)
                     }
-                    .frame(width: 50, height: 15)
-                    .opacity(user.site_admin ? 1.0 : 0.0)
                 }
+                .padding()
+                .font(.body)
+                HStack {
+                    Image("Location")
+                    .resizable()
+                    .frame(width: 50.0, height: 50.0)
+                    Text(remoteUserDetails.location)
+                }
+                .padding()
+                .font(.body)
+                HStack {
+                    Image("Blog")
+                    .resizable()
+                    .frame(width: 50.0, height: 50.0)
+                    Text(remoteUserDetails.blog)
+                }
+                .padding()
+                .font(.body)
             }
-            .padding()
-            .frame(width: 250.0, height: 80.0)
-            HStack {
-                Image("Location")
-                .resizable()
-                .frame(width: 50.0, height: 50.0)
-                Text(remoteUserDetails.location)
-            }
-            .padding()
-            .frame(width: 250.0, height: 80.0)
-            HStack {
-                Image("Blog")
-                .resizable()
-                .frame(width: 50.0, height: 50.0)
-                Text(remoteUserDetails.blog)
-            }
-            .padding()
-            .frame(width: 250.0, height: 80.0)
-            
         }
     }
 }
