@@ -2,7 +2,7 @@
 
 This is a test app. Test with Swift, MVVM.  
 You can see users list of GitHub in this app, most 100 ursers.  
-And the user details (todo)
+And the user details
 
 ## Authors
 
