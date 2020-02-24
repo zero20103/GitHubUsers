@@ -43,9 +43,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                         self.window = window
                         window.makeKeyAndVisible()
                     }
+                    //print(users)
                 }
                 catch {
-                   print(error)
+                   print("\(url):\(error)")
                 }
             }
         }.resume()

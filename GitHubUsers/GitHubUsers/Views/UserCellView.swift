@@ -12,10 +12,14 @@ struct UserCellView: View {
     @ObservedObject var remoteImage: RemoteImage
     var userCell: UserCellViewModel
     
+    init() {
+        let user = User.TestUser()
+        self.userCell = UserCellViewModel(user: user)
+        remoteImage = RemoteImage(imageUrl: user.avatar_url)
+    }
     init(user: User) {
         self.userCell = UserCellViewModel(user: user)
-        remoteImage = RemoteImage(imageUrl: self.userCell.avatar_url)
-        print(userCell.login)
+        remoteImage = RemoteImage(imageUrl: user.avatar_url)
     }
     
     var body: some View {
@@ -43,6 +47,12 @@ struct UserCellView: View {
             }
         }
         .padding(.all, 3.0)
+    }
+}
+
+struct UserCellView_Previews: PreviewProvider {
+    static var previews: some View {
+        UserCellView()
     }
 }
 

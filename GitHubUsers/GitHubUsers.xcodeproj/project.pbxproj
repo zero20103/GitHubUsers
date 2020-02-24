@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1461D7462402F02D00201BE7 /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1461D7452402F02D00201BE7 /* UserDetailsView.swift */; };
+		1461D7482402F13E00201BE7 /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1461D7472402F13E00201BE7 /* UserDetailsViewModel.swift */; };
+		1461D74E240386B500201BE7 /* RemoteUserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1461D74D240386B500201BE7 /* RemoteUserDetails.swift */; };
 		1466187B2402198200AA677C /* UserCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1466187A2402198200AA677C /* UserCellView.swift */; };
 		146619072402CE0D00AA677C /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146619062402CE0D00AA677C /* UserListView.swift */; };
 		1466190B2402D87300AA677C /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1466190A2402D87300AA677C /* RemoteImage.swift */; };
@@ -40,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1461D7452402F02D00201BE7 /* UserDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsView.swift; sourceTree = "<group>"; };
+		1461D7472402F13E00201BE7 /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
+		1461D74D240386B500201BE7 /* RemoteUserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUserDetails.swift; sourceTree = "<group>"; };
 		1466187A2402198200AA677C /* UserCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellView.swift; sourceTree = "<group>"; };
 		146619062402CE0D00AA677C /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		1466190A2402D87300AA677C /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
@@ -158,7 +164,9 @@
 			isa = PBXGroup;
 			children = (
 				14D3FEA42401220D00AAA364 /* UserCellViewModel.swift */,
+				1461D7472402F13E00201BE7 /* UserDetailsViewModel.swift */,
 				1466190A2402D87300AA677C /* RemoteImage.swift */,
+				1461D74D240386B500201BE7 /* RemoteUserDetails.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -179,6 +187,7 @@
 				14BB48C92400B51800051FD4 /* ContentView.swift */,
 				1466187A2402198200AA677C /* UserCellView.swift */,
 				146619062402CE0D00AA677C /* UserListView.swift */,
+				1461D7452402F02D00201BE7 /* UserDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -318,7 +327,10 @@
 				14BB48FA2400B68B00051FD4 /* User.swift in Sources */,
 				14BB48C62400B51800051FD4 /* AppDelegate.swift in Sources */,
 				1466190B2402D87300AA677C /* RemoteImage.swift in Sources */,
+				1461D7462402F02D00201BE7 /* UserDetailsView.swift in Sources */,
 				146619072402CE0D00AA677C /* UserListView.swift in Sources */,
+				1461D74E240386B500201BE7 /* RemoteUserDetails.swift in Sources */,
+				1461D7482402F13E00201BE7 /* UserDetailsViewModel.swift in Sources */,
 				14BB48C82400B51800051FD4 /* SceneDelegate.swift in Sources */,
 				14BB48CA2400B51800051FD4 /* ContentView.swift in Sources */,
 				1466187B2402198200AA677C /* UserCellView.swift in Sources */,

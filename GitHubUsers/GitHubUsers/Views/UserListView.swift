@@ -12,7 +12,7 @@ struct UserListView: View {
     let users: [User]
     
     init() {
-        self.users = []
+        self.users = [User.TestUser()]
     }
     init(users: [User]) {
         self.users = users
@@ -20,9 +20,13 @@ struct UserListView: View {
     
     var body: some View {
         VStack {
-            Text("Users")
-            List(users, id: \.id) { user in
-                UserCellView(user: user)
+            NavigationView{
+                List(users, id: \.id) { user in
+                    NavigationLink(destination: UserDetailsView(user: user)) {
+                        UserCellView(user: user)
+                    }
+                }
+                .navigationBarTitle(Text("Users"))
             }
         }
     }
